@@ -19,6 +19,10 @@ const getEmailList = async (token) => {
 const getLatestEmail = async (token) => {
   await delay(5000);
   let emailList = await getEmailList(token);
+  while (emailList.length === 0) {
+    await delay(5000);
+    emailList = await getEmailList(token);
+  }
   return emailList[0];
 };
 
