@@ -4,8 +4,8 @@ import * as mail from './utils/mail2.js';
 import { readFileSync, writeFile } from 'fs';
 import path from 'path';
 
-//const gqlDir = './node_modules/quora-poe.js/graphql';
-const gqlDir = './graphql';
+const gqlDir = './node_modules/quora-poe.js/graphql';
+//const gqlDir = './graphql';
 type models = 'gpt-4' | 'chatgpt' | 'sage' | 'claude+' | 'claude' | 'dragonfly';
 const queries = {
   chatViewQuery: readFileSync(path.join(gqlDir, 'ChatViewQuery.graphql'), 'utf8'),
