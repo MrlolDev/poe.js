@@ -4,7 +4,7 @@ import * as mail from './utils/mail.js';
 import { readFileSync, writeFile } from 'fs';
 import delay from 'delay';
 
-const gqlDir = process.cwd() + '/graphql';
+const gqlDir = './graphql';
 type models = 'gpt-4' | 'chatgpt' | 'sage' | 'claude+' | 'claude' | 'dragonfly';
 const queries = {
   chatViewQuery: readFileSync(gqlDir + '/ChatViewQuery.graphql', 'utf8'),
