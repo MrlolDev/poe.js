@@ -2,18 +2,24 @@ import { scrape, getUpdatedSettings } from './utils/credentials.js';
 import { listenWs, connectWs, disconnectWs } from './utils/websocket.js';
 import * as mail from './utils/mail.js';
 import { readFileSync, writeFile } from 'fs';
-import delay from 'delay';
+import path from 'path';
 
-const gqlDir = './graphql';
+const gqlDir = './node_modules/quora-poe.js/graphql';
 type models = 'gpt-4' | 'chatgpt' | 'sage' | 'claude+' | 'claude' | 'dragonfly';
 const queries = {
-  chatViewQuery: readFileSync(gqlDir + '/ChatViewQuery.graphql', 'utf8'),
-  addMessageBreakMutation: readFileSync(gqlDir + '/AddMessageBreakMutation.graphql', 'utf8'),
-  chatPaginationQuery: readFileSync(gqlDir + '/ChatPaginationQuery.graphql', 'utf8'),
-  addHumanMessageMutation: readFileSync(gqlDir + '/AddHumanMessageMutation.graphql', 'utf8'),
-  loginMutation: readFileSync(gqlDir + '/LoginWithVerificationCodeMutation.graphql', 'utf8'),
-  signUpWithVerificationCodeMutation: readFileSync(gqlDir + '/SignupWithVerificationCodeMutation.graphql', 'utf8'),
-  sendVerificationCodeMutation: readFileSync(gqlDir + '/SendVerificationCodeForLoginMutation.graphql', 'utf8'),
+  chatViewQuery: readFileSync(path.join(gqlDir, 'ChatViewQuery.graphql'), 'utf8'),
+  addMessageBreakMutation: readFileSync(path.join(gqlDir, '/AddMessageBreakMutation.graphql'), 'utf8'),
+  chatPaginationQuery: readFileSync(path.join(gqlDir, '/ChatPaginationQuery.graphql'), 'utf8'),
+  addHumanMessageMutation: readFileSync(path.join(gqlDir, '/AddHumanMessageMutation.graphql'), 'utf8'),
+  loginMutation: readFileSync(path.join(gqlDir, '/LoginWithVerificationCodeMutation.graphql'), 'utf8'),
+  signUpWithVerificationCodeMutation: readFileSync(
+    path.join(gqlDir, '/SignupWithVerificationCodeMutation.graphql'),
+    'utf8',
+  ),
+  sendVerificationCodeMutation: readFileSync(
+    path.join(gqlDir, '/SendVerificationCodeForLoginMutation.graphql'),
+    'utf8',
+  ),
 };
 
 let [pbCookie, channelName, appSettings, formkey] = ['', '', '', ''];

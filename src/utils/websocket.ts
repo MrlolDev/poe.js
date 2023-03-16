@@ -50,7 +50,6 @@ export const listenWs = async (ws) => {
             }
           });
           previousText = text;
-          process.stdout.write(result);
         } else {
           ws.removeListener('message', onMessage);
           // return complete result
