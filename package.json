@@ -1,6 +1,6 @@
 {
   "name": "quora-poe.js",
-  "version": "1.0.3",
+  "version": "1.0.3-alpha",
   "description": "A package to interact with poe.com",
   "main": "dist/index.js",
   "type": "module",

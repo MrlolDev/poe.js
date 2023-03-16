@@ -20,6 +20,8 @@ import ChatBot from '../dist/index.js';
       content: 'What is my name?',
     },
   ];
-  let response = await bot.send(conversation, 'gpt-4');
-  console.log(response);
+  for (let i = 0; i < 20; i++) {
+    console.log(i);
+    let response = bot.send(conversation, 'gpt-4');
+  }
 })();
