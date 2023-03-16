@@ -1,5 +1,5 @@
 {
-  "name": "poe.js",
+  "name": "quora-poe.js",
   "version": "1.0.0",
   "description": "A package to interact with poe.com",
   "main": "dist/index.js",
@@ -13,7 +13,13 @@
     "url": "git+https://github.com/MrlolDev/poe.js.git"
   },
   "keywords": [
-    "poe"
+    "poe",
+    "quora",
+    "quora-poe",
+    "poe.com",
+    "gpt-4",
+    "chatgpt",
+    "claude"
   ],
   "author": "MrlolDev",
   "license": "Apache-2.0",

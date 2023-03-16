@@ -1,11 +1,12 @@
-# poe.js
+# quora-poe.js
 
 A package to interact with poe.com.
+Based on the work of (muharamdani)[https://github.com/muharamdani]
 
 ## Installation
 
 ```bash
-npm install poe.js
+npm install quora-poe.js
 ```
 
 ## Usage
@@ -15,7 +16,7 @@ Available models: gpt-4, chatgpt, sage, claude+, claude, dragonfly
 One message:
 
 ```js
-import Poe from 'poe.js';
+import Poe from 'quora-poe.js';
 (async () => {
   const bot = new Poe();
   await bot.start();
@@ -26,7 +27,7 @@ import Poe from 'poe.js';
 Conversation:
 
 ```js
-import Poe from 'poe.js';
+import Poe from 'quora-poe.js';
 (async () => {
   const bot = new Poe();
   await bot.start();
